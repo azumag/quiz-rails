@@ -1,5 +1,5 @@
 class CategoryController < ApplicationController
   def index
-    render :json => Category.all
+    render :json => {:category => Category.all.as_json(:only => [:name]) }
   end
 end
