@@ -9,7 +9,11 @@ class RankingController < ApplicationController
       @category_name = "Yangon"
     end
     category = Category.find_by_name(@category_name)
-    @scores = category.scores.order("accuracy_rate DESC")
+    if category
+      @scores = category.scores.order("accuracy_rate DESC")
+    else
+      @scores = []
+    end
   end
 
   def create
