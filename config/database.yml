@@ -51,7 +51,7 @@ test:
 #
 production:
   <<: *default
-  adapter: pg
-  database: quiz-rails_production
-  username: quiz-rails
-  password: <%= ENV['QUIZ-RAILS_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  database: dg2ljnktik97r
+  username: qjrlyyyubuolup
+  password:
