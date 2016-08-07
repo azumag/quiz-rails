@@ -1,8 +1,45 @@
-<h1> Ranking of <%= @category_name %> </h1>
-<% @scores.each do |score|%>
-<hr>
-<%= score.user.name %>
-:
-<%= score.accuracy_rate %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ranking table</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+     tr:nth-child(even) {
+    background-color: #dddddd;
+    }
+    th{
+      color: #039be5;
+    }
+    h2{
+      color: #039be5;
+    }
+  </style>
+</head>
+<body>
 
-<% end %>
+<div class="container">
+  <h2>Ranking Page <%= @category_name %> </h2>
+  <table class="table table-bordered"  style="width:50%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Percentage(%)</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @scores.each do |score|%>
+      <tr>
+        <td width="25%"><%= score.user.name %></td>
+        <td width="25%"><%= score.accuracy_rate %>%</td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
