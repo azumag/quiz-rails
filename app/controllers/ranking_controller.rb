@@ -5,6 +5,9 @@ class RankingController < ApplicationController
   def show
 
     @category_name = params[:id]
+    unless @category_name
+      @category_name = "Yangon"
+    end
     category = Category.find_by_name(@category_name)
     @scores = category.scores.order("accuracy_rate DESC")
   end
