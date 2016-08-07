@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: one
+  question: MyString
+  collect: 1
+
+two:
+  category: two
+  question: MyString
+  collect: 1

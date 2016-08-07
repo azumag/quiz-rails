@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806073333) do
+ActiveRecord::Schema.define(version: 20160807044245) do
+
+  create_table "answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "quiz_id"
+    t.string   "ans_name"
+    t.integer  "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quiz_id"], name: "index_answers_on_quiz_id", using: :btree
+  end
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -18,4 +27,15 @@ ActiveRecord::Schema.define(version: 20160806073333) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "quizzes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "category_id"
+    t.string   "question"
+    t.integer  "collect"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_quizzes_on_category_id", using: :btree
+  end
+
+  add_foreign_key "answers", "quizzes"
+  add_foreign_key "quizzes", "categories"
 end
