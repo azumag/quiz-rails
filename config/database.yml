@@ -19,6 +19,7 @@ default: &default
 
 development:
   <<: *default
+  adapter: sqlite3
   database: quiz-rails_development
 
 azumag:
