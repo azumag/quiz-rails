@@ -6,7 +6,7 @@ class RankingController < ApplicationController
 
     @category_name = params[:id]
     category = Category.find_by_name(@category_name)
-    @scores = category.scores
+    @scores = category.scores.order("accuracy_rate DESC")
   end
 
   def create
