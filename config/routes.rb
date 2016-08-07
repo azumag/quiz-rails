@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "category#index"
+  root "ranking#show"
   get 'category/index'
 
   resources :quizz
