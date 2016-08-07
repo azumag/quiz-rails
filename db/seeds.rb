@@ -21,6 +21,7 @@ quiz.answers << Answer.create(ans_name: "Java", number:2)
 quiz.answers << Answer.create(ans_name: "Cobol", number:3)
 quiz.answers << Answer.create(ans_name: "Fortran", number:4)
 quiz.category = it
+quiz.save
 
 quiz = Quiz.create(
   question: "Which is collect command to create new branch?",
@@ -31,6 +32,7 @@ quiz.answers << Answer.create(ans_name: "git merge", number:2)
 quiz.answers << Answer.create(ans_name: "git checkout -b ", number:3)
 quiz.answers << Answer.create(ans_name: "git branch", number:4)
 quiz.category = it
+quiz.save
 
 
 quiz = Quiz.create(
@@ -42,6 +44,7 @@ quiz.answers << Answer.create(ans_name: "MASHIBA", number:2)
 quiz.answers << Answer.create(ans_name: "acer", number:3)
 quiz.answers << Answer.create(ans_name: "DENSO", number:4)
 quiz.category = japan
+quiz.save
 
 quiz = Quiz.create(
   question: "Which is the most north area in Japan?",
@@ -52,6 +55,7 @@ quiz.answers << Answer.create(ans_name: "Kyusyu", number:2)
 quiz.answers << Answer.create(ans_name: "Tokyo", number:3)
 quiz.answers << Answer.create(ans_name: "Nagoya", number:4)
 quiz.category = japan
+quiz.save
 
 
 quiz = Quiz.create(
@@ -63,6 +67,7 @@ quiz.answers << Answer.create(ans_name: "CloudSource", number:2)
 quiz.answers << Answer.create(ans_name: "HONDA", number:3)
 quiz.answers << Answer.create(ans_name: "SONY", number:4)
 quiz.category = yangon
+quiz.save
 
 
 quiz = Quiz.create(
@@ -74,3 +79,4 @@ quiz.answers << Answer.create(ans_name: "Yangoon", number:2)
 quiz.answers << Answer.create(ans_name: "Rangoon", number:3)
 quiz.answers << Answer.create(ans_name: "Nyangon", number:4)
 quiz.category = yangon
+quiz.save
