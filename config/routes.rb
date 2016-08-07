@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'category/index'
   get 'quizz/index'
 
+  resources :ranking
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
