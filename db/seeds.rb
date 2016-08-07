@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Category.create(name: 'Yangon')
-Category.create(name: 'IT')
-Category.create(name: 'Japan')
+yangon = Category.create(name: 'Yangon')
+it = Category.create(name: 'IT')
+japan = Category.create(name: 'Japan')
 
 
 # // quiz creation
