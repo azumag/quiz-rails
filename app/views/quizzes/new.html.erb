@@ -1,6 +1,25 @@
 <h1>Create Quiz<h1>
 
 <%= form_for @quiz do |f| %>
-  question:<%= f.text_field :question %>
-  <%= f.submit %>
+<div>
+  category: <%= f.collection_select :category_id, Category.all, :id, :name %>
+</div>
+
+<div>
+  question:<br>
+  <%= f.text_field :question %>
+</div>
+answers:
+<% @quiz.answers.each do |answer| %>
+<%= f.fields_for :answers, answer do |answer_field| %>
+<div>
+  <%= answer.number %>:<%= answer_field.text_field :ans_name %>
+  <%= answer_field.hidden_field :number%>
+</td>
+</div>
+<% end %>
+<% end %>
+Collect Answer:<%= f.select :collect, [[0,0],[1,1],[2,2],[3,3]] %>
+
+<%= f.submit %>
 <% end %>

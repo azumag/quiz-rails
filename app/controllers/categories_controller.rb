@@ -28,7 +28,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category = Category.delete(params[:id])
-    redirect_to categories_path
+    redirect_to quizzes_path 
   end
 
   def category_params

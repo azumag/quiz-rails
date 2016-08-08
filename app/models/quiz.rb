@@ -1,6 +1,9 @@
 class Quiz < ApplicationRecord
   belongs_to :category
-  has_many :answers
+  has_many :answers, dependent: :destroy
+
+  accepts_nested_attributes_for :answers
+  accepts_nested_attributes_for :category
 
   def self.get_quizz quizzes
     quizzes.collect do |quiz|
