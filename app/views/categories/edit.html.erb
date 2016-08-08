@@ -1,0 +1,10 @@
+<h1>Edit Category<h1>
+
+<%= form_for @category do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+
+<%= form_for @category, method: :delete do |f| %>
+  <%= f.submit :delete  %>
+<% end %>

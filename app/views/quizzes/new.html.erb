@@ -1,0 +1,6 @@
+<h1>Create Quiz<h1>
+
+<%= form_for @quiz do |f| %>
+  question:<%= f.text_field :question %>
+  <%= f.submit %>
+<% end %>

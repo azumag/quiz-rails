@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   root "ranking#show"
-  get 'category/index'
 
-  resources :quizz
+
+  get 'categories/list'
+  resources :categories
+
+  resources :quizzes
 
   resources :ranking
 
