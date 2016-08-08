@@ -7,6 +7,9 @@ This app is deployed to server automatically with https://www.heroku.com
 - Rails 5.0.0
 - Ruby 2.2.2 (or later)
 
+## CRUD Quiz
+- http://blooming-depths-53477.herokuapp.com/quizzes/
+
 ## APIs
 
 ### Ranking for category
