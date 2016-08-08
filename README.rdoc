@@ -1,28 +1,14 @@
-== README
+## APIs (final)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Ranking for category
+https://blooming-depths-53477.herokuapp.com/ranking/CategoryName
+-  https://blooming-depths-53477.herokuapp.com/ranking/IT
+-https://blooming-depths-53477.herokuapp.com/ranking/Yangon
+-https://blooming-depths-53477.herokuapp.com/ranking/Japan
 
-Things you may want to cover:
+### Category list
+https://blooming-depths-53477.herokuapp.com/category/index
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Quiz for specific category
+https://blooming-depths-53477.herokuapp.com/quizz/CategoryName
+- https://blooming-depths-53477.herokuapp.com/quizz/IT
