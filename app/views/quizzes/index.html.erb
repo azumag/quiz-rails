@@ -1,0 +1,21 @@
+
+<% @categories.each do |category| %>
+<ul class="">
+  <li><%= category.name %>
+    <!-- <%= link_to "EDIT", edit_category_path(category) %> -->
+    <!-- <%= link_to "DELETE", category_path(category), method: :delete %> -->
+  </li>
+  <ul>
+    <% category.quizzes.each do |quiz| %>
+      <li> <%= quiz.question%>
+        <%= link_to "EDIT", edit_quiz_path(quiz) %>/
+        <%= link_to "DELETE", quiz_path(quiz), method: :delete %>/
+       </li>
+    <% end %>
+  </ul>
+</ul>
+<% end %>
+
+<div class="">
+  <%= link_to "ADD QUIZ", new_quiz_path %>
+</div>
